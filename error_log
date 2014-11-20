@@ -1,0 +1,1 @@
+[29-Oct-2014 14:08:26 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home4/caedmons/public_html/wp/wp-content/themes/caedmon-bones/index.php on line 1

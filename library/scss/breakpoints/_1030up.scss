@@ -1,0 +1,312 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  max-width: 1080px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.social-header {
+	.site-description {
+		float:left;
+		display: inline-block;
+		width:70%;
+		text-align: left;
+		font-size: .9em;
+		line-height: 3em;
+	}
+}
+
+.wrap.social-header, .admin-bar .wrap.social-header {
+	position:relative;
+	top:0;
+	left:auto;
+}
+
+.menu-toggler {
+	display:none;
+}
+
+#inner-header {
+	padding:0; 
+
+	.site-description {
+		display: none;
+	}
+}
+#logo {
+	text-align:left;
+	margin:0;
+	padding:2em 1% 0;
+	width:50%;
+	float:left;
+}
+
+.header-widgets {
+	width: 45%;
+	float:right;
+	padding:2em 0 0;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.header-widgets .eo-events-widget {
+	text-align:right;
+} 
+.subnav, .parent-sidebar-menu {
+	padding-left:0;
+
+	li {
+		list-style-type: none;
+		padding:0;
+		margin:0;	
+	}
+
+	a, a:visited {
+		border: none;
+		color:$text-color;
+	}
+
+	.current_page_item > a {
+		color:$green;
+	}
+
+	li:last-of-type {
+		margin-bottom: 0;
+	}
+
+}
+.parent-sidebar-menu {
+	& > .current_page_item > a,
+	& > .current_page_ancestor > a {
+		font-weight:700;
+	}
+
+
+	ul {
+		margin-bottom:0;
+	}
+}
+
+nav {
+	text-align:justify;
+}
+
+.nav {
+	border: 0;
+	font-size:1em;
+	padding:0;
+	margin:0;
+	
+	&.top-nav {
+		width:100%;
+		padding:0 1em;
+		display: block;
+		clear:both;
+	}
+
+	/* equally spaces out list items in main menu, see http://css-tricks.com/equidistant-objects-with-css/ */
+	&.top-nav:after {
+		content:'';
+		width:100%;
+		display: inline-block;
+	}
+
+	.logo-menu & {
+		margin-bottom: 1em;
+	}
+
+	ul {
+		margin-top:0;
+	}
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+		a {
+			border-bottom:3px dotted $red;
+		}
+	}  /* end current highlighters */
+
+	li {
+		display: inline-block;
+		position: relative;
+
+
+		a {
+			border-bottom: 0;
+			margin-bottom:.25em;
+			padding: .75em .25em .2em;
+		}
+
+		ul.sub-menu,
+		ul.children {
+			display: none;
+			visibility: hidden;
+			/* height:0;
+			opacity: 0;
+			overflow: hidden; */
+			background-color: $light-gray;
+			padding:0;
+			margin:0;
+			width:auto;
+			min-width: 200px;
+			border-top: 0;
+			position: absolute;
+			z-index: 8999;
+			text-align:left;
+			border-radius: .5em;
+			box-shadow: .2em .2em .2em rgba(102, 102, 102, .3);
+			font-size:.9em;
+
+			li {
+
+				a {
+					padding-left: 1em;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border: none;
+
+				}
+
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+				ul, ul ul {
+					top:0;
+					left:100%;
+
+					li:last-child {
+						a {
+							margin-bottom:0;
+							border-color: transparent;	
+						}
+						
+					}
+					
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current-page-ancestor {
+				a {
+					border: none;
+				}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			/* height: auto;
+			opacity:1; */
+			display: block;
+			visibility: visible;
+			top:98%;
+			left:0;
+			@include transition(all .5s ease);
+		}
+
+		&:last-of-type:hover > ul {
+			display: block;
+			visibility: visible;
+			right:0;
+			left:auto;
+		}
+
+		/* &:nth-child(1) > a {
+			color:$blue;
+		}
+
+		&:nth-child(2) > a {
+			color:darken($blue,10%);
+		}
+
+		&:nth-child(3) > a {
+			color:lighten($red,10%);
+		}
+
+		&:nth-child(4) > a {
+			color:darken($green,10%);
+		}
+
+		&:nth-child(5) > a {
+			color:darken($violet6,20%);
+		}
+
+		&:nth-child(6) > a {
+			color:$green;
+		}
+
+		&:nth-child(7) > a {
+			color:lighten($green,10%);
+		}
+
+		&:nth-child(8) > a {
+			color:darken($orange6,10%);
+		}
+
+		&:nth-child(9) > a {
+			color:darken($tan,30%);
+		} */
+
+	} /* end .menu ul li */
+
+	&.social-nav li a, &.social-nav li a:visited {
+		color:$red;
+	}
+
+	
+
+} /* end .nav */
+
+.flexslider.narrow {
+	width:71.4286%;
+	padding-right:2em;
+	float:left;
+}
+
+.sidemain {
+	width: 28.5714%;
+	text-align:left;
+	font-size:1.1em;
+	float:right;
+	padding:0 .25em;
+}
+
+
+#main .fc-header td {
+	display:inline-block;
+
+		&.fc-header-left, &.fc-header-right {
+			width: 25%;
+		}
+
+		&.fc-header-right {
+			text-align: right;
+		}
+
+		&.fc-header-center {
+			width: 48%;
+			text-align:center;
+		}
+}
