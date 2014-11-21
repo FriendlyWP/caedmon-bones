@@ -13,6 +13,13 @@ Template Name: Home Page - Narrow
 
 
 						<div class="homemain cf">
+							<?php 
+							if (function_exists('get_field') && get_field('bump-down-content')) {
+								echo '<div class="bump-down">';
+									the_field('bump-down-content'); 
+								echo '</div>';
+							}
+							?>	
 				    
 				    	<?php 
 				    	//adding scripts file in the footer

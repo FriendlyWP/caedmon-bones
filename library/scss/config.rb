@@ -6,7 +6,7 @@
 
 #########
 # 1. Set this to the root of your project when deployed (end with trailing slash)
-http_path = "http://new.caedmonschool.org/"
+http_path = "http://caedmonschool.org/"
 
 # 2. probably don't need to touch these
 css_dir = "../css"
@@ -22,7 +22,8 @@ sourcemap = true
 # output_style = :expanded
 
 # 4. When you are ready to launch your WP theme comment out (3) and uncomment the line below
-output_style = (environment == :production) ? :compressed : :expanded
+#output_style = (environment == :production) ? :compressed : :expanded
+output_style = :compressed
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = (environment == :production) ? false : true

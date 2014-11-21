@@ -7,7 +7,9 @@ Stylesheet: Base Mobile Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-
+#wpadminbar .quicklinks ul {
+    overflow: visible !important;
+} 	
 body {
 	font-family: $sans-serif;
 	font-weight:normal;
@@ -175,6 +177,7 @@ h6 {
 }	
 
 .header-widgets .eo-events-widget, .header-widgets .eo-events-shortcode {
+	clear:both;
 	list-style: none;
 	text-align:center;
 	/* padding-top: 20px;
@@ -182,11 +185,17 @@ h6 {
 	background:url('../images/six-day-rainbow.png') top right no-repeat; */
 	/* padding-right:15px;
 	background:url('../images/six-day-rainbow-vert.png') 100% 50% no-repeat; */
+
 	span {
 		display: inline-block;
 		vertical-align: middle;
 	}	
 }
+
+ul.eo-events-shortcode {
+	clear:both;
+}
+
 .six-day-date {
 	text-align: left;
 	margin-right: .6em;
@@ -527,6 +536,19 @@ em {
 	margin: 0;
 }
 
+.bump-down {
+	background-color: $red;
+	border-radius:.5em;
+	padding:1.5em;
+	margin-bottom:1.5em;
+	color:$white;
+	
+
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
 /* entry content */
 .entry-content {
 
@@ -736,9 +758,8 @@ margin: 0;
 }
 
 
-#wpadminbar .quicklinks ul {
-    overflow: visible !important;
-} 	
+
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
