@@ -26,7 +26,8 @@ if( $flexible_posts->have_posts() ):
 				                  ?>
 				                  <?php if (function_exists('get_field')) {
 				              		echo '<span style="font-weight:700;">';
-				              		the_field('attribution');
+				              		//the_field('attribution');
+				              		the_title();
 				              		echo '</span>';
 				              		if (get_field('about')) {
 				              			echo '<br />';
